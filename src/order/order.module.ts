@@ -9,7 +9,7 @@ import { BullModule } from '@nestjs/bullmq';
   imports: [
     MongooseModule.forFeature([{ name: Order.name, schema: OrderSchema }]),
     BullModule.registerQueue({
-      name: 'product-queue',
+      name: 'product-events',
     }),
   ],
   providers: [OrderService],

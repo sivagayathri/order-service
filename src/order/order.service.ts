@@ -10,7 +10,7 @@ import { Queue } from 'bullmq';
 export class OrderService {
   constructor(
     @InjectModel(Order.name) private orderModel: Model<Order>,
-    @InjectQueue('product-queue') private productQueue: Queue,
+    @InjectQueue('product-events') private productQueue: Queue,
   ) {}
 
   async create(createOrder: CreateOrderDto) {
